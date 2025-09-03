@@ -9,8 +9,8 @@ logger = get_logger()
 
 class BinanceWrapper:
     def __init__(self,
-                 base_url: str = settings.BINANCE_BASE_URL,
-                 ttl_seconds: int = settings.CACHE_TTL_SECONDS):
+                 base_url: str = settings.binance_base_url,
+                 ttl_seconds: int = settings.cache_ttl_seconds):
         self.base_url: str = str(base_url).rstrip('/')
         self.ttl_seconds: int = ttl_seconds
         self.cache = FxCache(ttl_seconds)

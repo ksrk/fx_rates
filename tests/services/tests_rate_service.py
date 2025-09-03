@@ -49,7 +49,7 @@ async def test_get_rate_same_currency_edge_case(monkeypatch):
     resp = await svc.get_rate("eur", "eur", 1234)
 
     assert resp.currency == "EUR"
-    assert resp.quantity == 1.0
+    assert resp.quantity == 1234.0
     svc.binance.get_currency_price.assert_not_called()
 
 
